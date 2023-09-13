@@ -1,0 +1,70 @@
+    1.   Public access specifier
+
+        class Derived : public Base
+    
+        +-------------------+
+        |     Base Class    |
+        |-------------------|
+        |   Public Member   |
+        |  Protected Member |
+        |  Private Member   |
+        +-------------------+
+                |
+                |
+                v
+        +-------------------+
+        |    Derived Class  |
+        |-------------------|
+        |   Public Member   |
+        |  Protected Member |
+        |       (X)         |
+        +-------------------+
+
+
+       
+    2.  Protected access specifier
+
+        class Derived : Protected Base
+
+            +-------------------+
+            |     Base Class    |
+            |-------------------|
+            |   Public Member   |
+            |  Protected Member |
+            |  Private Member   |
+            +-------------------+
+                     |
+                     |
+                     v
+            +-------------------+
+            |    Derived Class  |
+            |-------------------|
+            |  Protected Member |
+            |  Protected Member |
+            |       (X)         |
+            +-------------------+
+        
+
+
+    3.  Private access specifier
+
+        class Derived : private Base
+
+            +-------------------+
+            |     Base Class    |
+            |-------------------|
+            |   Public Member   |
+            |  Protected Member |
+            |  Private Member   |
+            +-------------------+
+                    |
+                    |
+                    v
+            +-------------------+
+            |    Derived Class  |
+            |-------------------|
+            |  Private Member   |
+            |  Private Member   |
+            |       (X)         |
+            +-------------------+
+
